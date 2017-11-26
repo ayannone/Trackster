@@ -14,6 +14,8 @@ $(document).ready(function() {
     Append each "row" to the container in the body to display all tracks.
   */
   Trackster.renderTracks = function(tracks) {
+    $('#tracklist').empty();
+    
     // console.log(tracks);
     var amountTracks = tracks.results.trackmatches.track.length;
 
@@ -23,7 +25,7 @@ $(document).ready(function() {
       var url = currentTrack['url'];
       var song = currentTrack['name'];
       var artist = currentTrack['artist'];
-      var albumart = currentTrack['image'][0]['#text'];
+      var albumart = currentTrack['image'][1]['#text'];
       var listeners = currentTrack['listeners'];
 
       var $track = $(
@@ -38,7 +40,7 @@ $(document).ready(function() {
           "<span>" + artist + "</span>" +
         "</div>" +
         "<div class='col-xs-2'>" +
-          "<span>" + albumart + "</span>" +
+          "<img src='" + albumart + "'/>" +
         "</div>" +
         "<div class='col-xs-2'>" +
           "<span>" + listeners + "</span>" +
