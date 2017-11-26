@@ -1,0 +1,45 @@
+/*
+  Custom styles for Trackster App
+*/
+
+html {
+  font-size: 16px;
+  font-family: Work Sans, sans-serif;
+}
+
+header {
+  height: 6rem;
+  background-color: rgb(35, 2, 63);
+  display: flex;
+  align-items: center;
+}
+
+header .row {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: Righteous, sans-serif;
+  font-size: 2.5rem;
+  color: rgb(255, 0, 171);
+}
+
+#search-input {
+  color: rgb(191, 191, 191);
+  border-radius: 1rem;
+}
+
+#search-button {
+  background-color: rgb(255, 0, 171);
+  border-radius: 19px;
+}
+
+#search-button:hover {
+  background-color: rgb(255, 102, 204);
+}
+
+#search-button .fa-search {
+  color: black;
+  padding: 0 1rem;
+}
