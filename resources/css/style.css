@@ -4,7 +4,10 @@
 
 html {
   font-size: 16px;
-  font-family: Work Sans, sans-serif;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
 }
 
 header {
@@ -48,4 +51,8 @@ header .row {
   background-color: rgb(104, 0, 255);
   color: rgb(255, 255, 255);
   padding: 0.5rem 0;
+}
+
+#tracklist .play-button a {
+  color: rgb(255, 0, 171);
 }
