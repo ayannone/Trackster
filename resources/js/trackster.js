@@ -15,8 +15,8 @@ $(document).ready(function() {
   */
   Trackster.renderTracks = function(tracks) {
     $('#tracklist').empty();
-    
-    // console.log(tracks);
+
+    console.log(tracks);
     var amountTracks = tracks.results.trackmatches.track.length;
 
     for (i = 0; i < amountTracks; i++) {
@@ -31,21 +31,21 @@ $(document).ready(function() {
       var $track = $(
         "<div class='row'>" +
           "<div class='col-xs-1 col-xs-offset-1 play-button'>" +
-          "<a href='" + url + "' target='_blank' ><i class='fa fa-play-circle-o fa-2x'></i></a>" +
-        "</div>" +
-        "<div class='col-xs-4'>" +
-          "<span>" + song + "</span>" +
-        "</div>" +
-        "<div class='col-xs-2'>" +
-          "<span>" + artist + "</span>" +
-        "</div>" +
-        "<div class='col-xs-2'>" +
-          "<img src='" + albumart + "'/>" +
-        "</div>" +
-        "<div class='col-xs-2'>" +
-          "<span>" + listeners + "</span>" +
-        "</div>" +
-      "</div>");
+            "<a href='" + url + "' target='_blank' ><i class='fa fa-play-circle-o fa-2x'></i></a>" +
+            "</div>" +
+          "<div class='col-xs-4'>" +
+            "<span>" + song + "</span>" +
+          "</div>" +
+          "<div class='col-xs-2'>" +
+            "<span>" + artist + "</span>" +
+          "</div>" +
+          "<div class='col-xs-2'>" +
+            "<img src='" + albumart + "'/>" +
+          "</div>" +
+          "<div class='col-xs-2'>" +
+            "<span>" + numeral(listeners).format('0,0') + "</span>" +
+          "</div>" +
+        "</div>");
 
       // console.log($track);
       $('#tracklist').append($track);

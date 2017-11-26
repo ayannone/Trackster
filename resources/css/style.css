@@ -56,3 +56,13 @@ header .row {
 #tracklist .play-button a {
   color: rgb(255, 0, 171);
 }
+
+#tracklist .row {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+#tracklist .row:hover {
+  background-color: rgb(239, 237, 242);
+}
