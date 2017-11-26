@@ -9,6 +9,14 @@ $(document).ready(function() {
     Trackster.searchTracksByTitle($searchValue);
   });
 
+  $("#search-input").keyup(function(e) {
+        if (e.keyCode === 13) {
+          var $searchValue = $('#search-input').val();
+          Trackster.searchTracksByTitle($searchValue);
+        }
+      }
+    );
+
   /*
     Given an array of track data, create the HTML for a Bootstrap row for each.
     Append each "row" to the container in the body to display all tracks.
@@ -16,7 +24,7 @@ $(document).ready(function() {
   Trackster.renderTracks = function(tracks) {
     $('#tracklist').empty();
 
-    console.log(tracks);
+    // console.log(tracks);
     var amountTracks = tracks.results.trackmatches.track.length;
 
     for (i = 0; i < amountTracks; i++) {
